@@ -1,0 +1,18 @@
+/*
+Theme Name: LEZO Finance
+Theme URI: http://localhost/template_html
+Author: Muachung Dev
+Author URI: mailto:muachung.dev@gmail.com
+Description: Theme WordPress tài chính - doanh nghiệp, chuyển từ template HTML LEZO. Bootstrap 5, responsive, ACF, nhiều section động.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 7.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lezo
+Tags: business, finance, corporate, one-page, custom-logo, custom-menu, featured-images
+*/
+
+/* CSS thật của theme nằm ở assets/css/style.css (được enqueue trong functions.php).
+   File này chỉ chứa phần header bắt buộc của theme WordPress. */

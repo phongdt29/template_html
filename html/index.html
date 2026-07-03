@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEZO Finance - Financial Services Template</title>
+
+  <!-- Bootstrap 5 CSS (local) -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (local) -->
+  <link href="lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BAR (tầng 1 - xanh) ============ -->
+  <div class="top-bar d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-stretch">
+        <p class="mb-0 top-welcome">Welcome to Lezo Financial Services, we have over 25 years of expertise</p>
+        <ul class="list-unstyled d-flex align-items-center mb-0 top-social">
+          <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+          <li><a href="#"><i class="bi bi-google"></i></a></li>
+          <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+          <li class="lang">
+            <svg class="flag" width="22" height="13" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="uks"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+              <clipPath id="ukt"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+              <g clip-path="url(#uks)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </g>
+            </svg>
+            English <i class="bi bi-chevron-down small"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER INFO (tầng 2 - logo + liên hệ) ============ -->
+  <div class="header-info d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <a class="navbar-brand header-logo" href="#home">
+          <span class="brand-icon"><i class="bi bi-boxes"></i></span>
+          <span class="brand-text">LEZO<small>Finance</small></span>
+        </a>
+        <ul class="list-unstyled d-flex mb-0 info-blocks">
+          <li>
+            <i class="bi bi-geo-alt-fill"></i>
+            <div><span>13005 Greenville Avenue</span><strong>California, TX 70240</strong></div>
+          </li>
+          <li>
+            <i class="bi bi-telephone-fill"></i>
+            <div><span>+1 800125 6524</span><strong>Mail@Lezofinance.Com</strong></div>
+          </li>
+          <li>
+            <i class="bi bi-clock-fill"></i>
+            <div><span>10:00am To 6:00pm</span><strong>Sunday Closed</strong></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR (tầng 3 - thanh menu xanh) ============ -->
+  <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+    <div class="container">
+      <!-- Logo chỉ hiện trên mobile (desktop đã có ở tầng 2) -->
+      <a class="navbar-brand d-lg-none" href="#home">
+        <span class="brand-icon"><i class="bi bi-boxes"></i></span>
+        <span class="brand-text">LEZO<small>Finance</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT US <i class="bi bi-chevron-down caret"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">SERVICES <i class="bi bi-chevron-down caret"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#cases">GALLERY <i class="bi bi-chevron-down caret"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SHOP <i class="bi bi-chevron-down caret"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#news">BLOG <i class="bi bi-chevron-down caret"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+        </ul>
+        <div class="d-flex align-items-center nav-actions">
+          <a href="#" class="nav-cart"><i class="bi bi-bag"></i><span class="cart-count">0</span></a>
+          <a href="#" class="nav-search"><i class="bi bi-search"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO SLIDER ============ -->
+  <section id="home" class="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image:url('img/hero-1.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-subtitle">We Help</span>
+              <h1 class="hero-title">Growing Business</h1>
+              <p class="hero-desc">We help you managing asset, provide financial advice, leave money issue behind and focus on what matters most for your company.</p>
+              <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary-custom">Our Services</a>
+                <a href="#contact" class="btn btn-outline-custom">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image:url('img/hero-2.jpg');">
+          <div class="hero-overlay"></div>
+          <div class="container">
+            <div class="hero-content">
+              <span class="hero-subtitle">We Provide</span>
+              <h1 class="hero-title">Financial Advice</h1>
+              <p class="hero-desc">Trusted by thousands of clients worldwide to secure their financial future with expert consulting and strategy.</p>
+              <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary-custom">Our Services</a>
+                <a href="#contact" class="btn btn-outline-custom">Get In Touch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT COMPANY ============ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="section-label">About our company</span>
+          <h2 class="section-title">
+            <span class="highlight-num">30</span> years of excellence in sales training solutions
+          </h2>
+          <p class="text-muted">These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune.</p>
+          <p class="text-muted">If you have a problem, if no one else can help, and if you can find them, maybe you can hire the professional team.</p>
+          <div class="row awards mt-4">
+            <div class="col-4 text-center">
+              <i class="bi bi-award-fill award-icon"></i>
+              <h4>2014</h4>
+              <p>National Award</p>
+            </div>
+            <div class="col-4 text-center">
+              <i class="bi bi-award-fill award-icon"></i>
+              <h4>2016</h4>
+              <p>Global Award</p>
+            </div>
+            <div class="col-4 text-center">
+              <i class="bi bi-award-fill award-icon"></i>
+              <h4>2019</h4>
+              <p>Honor Award</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-img-wrap">
+            <img src="img/about.jpg" alt="About us" class="img-fluid rounded shadow">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="play-btn"><i class="bi bi-play-fill"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section id="services" class="section why-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="img/why.jpg" alt="Why choose us" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title text-primary-custom">Why Choose Us</h2>
+          <p class="text-muted">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence.</p>
+          <div class="row g-4 mt-2">
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <h5>Advanced Analytics</h5>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-briefcase-fill"></i></div>
+                <h5>Corporate Finance</h5>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-pc-display"></i></div>
+                <h5>Information Technology</h5>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-box">
+                <div class="feature-icon"><i class="bi bi-diagram-3-fill"></i></div>
+                <h5>Our Workflow &amp; Process</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COUNTERS ============ -->
+  <section class="section counter-section">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <i class="bi bi-people-fill"></i>
+            <h3 class="counter" data-target="81">0</h3>
+            <p>Team Members</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <i class="bi bi-emoji-smile-fill"></i>
+            <h3 class="counter" data-target="226">0</h3>
+            <p>Satisfied Clients</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <i class="bi bi-briefcase-fill"></i>
+            <h3 class="counter" data-target="308">0</h3>
+            <p>New Projects</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="counter-box">
+            <i class="bi bi-bar-chart-fill"></i>
+            <h3 class="counter" data-target="95" data-suffix="%">0</h3>
+            <p>Profit Increased</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OUR CASES ============ -->
+  <section id="cases" class="section cases-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-label">Our Portfolio</span>
+        <h2 class="section-title">Our Cases</h2>
+      </div>
+    </div>
+    <div class="cases-carousel">
+      <div id="casesCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="cases-track">
+              <div class="case-item"><img src="img/case-1.jpg" alt="Case 1"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-2.jpg" alt="Case 2"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-3.jpg" alt="Case 3"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-4.jpg" alt="Case 4"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cases-track">
+              <div class="case-item"><img src="img/case-5.jpg" alt="Case 5"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-6.jpg" alt="Case 6"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-7.jpg" alt="Case 7"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+              <div class="case-item"><img src="img/case-8.jpg" alt="Case 8"><div class="case-overlay"><i class="bi bi-plus-lg"></i></div></div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#casesCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+        <button class="carousel-control-next" type="button" data-bs-target="#casesCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+      </div>
+    </div>
+    <div class="cases-cta">
+      <div class="container text-center">
+        <p class="mb-0">Want to make new project? <a href="#contact">contact with us.</a> Our expert is ready to help you</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEET OUR ADVISORS ============ -->
+  <section class="section advisors-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-label">Our Team</span>
+        <h2 class="section-title">Meet Our Advisors</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="advisor-card">
+            <div class="advisor-img"><img src="img/advisor-1.jpg" alt="David Warner"></div>
+            <div class="advisor-body">
+              <h5>David Warner</h5>
+              <span class="advisor-role">CEO</span>
+              <p>As more and more people are turning to organic.</p>
+              <div class="advisor-social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="advisor-card">
+            <div class="advisor-img"><img src="img/advisor-2.jpg" alt="James Simth"></div>
+            <div class="advisor-body">
+              <h5>James Simth</h5>
+              <span class="advisor-role">Manager</span>
+              <p>As more and more people are turning to organic.</p>
+              <div class="advisor-social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="advisor-card">
+            <div class="advisor-img"><img src="img/advisor-3.jpg" alt="Adam Rose"></div>
+            <div class="advisor-body">
+              <h5>Adam Rose</h5>
+              <span class="advisor-role">Employee</span>
+              <p>As more and more people are turning to organic.</p>
+              <div class="advisor-social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="advisor-card">
+            <div class="advisor-img"><img src="img/advisor-4.jpg" alt="Kevin Peterson"></div>
+            <div class="advisor-body">
+              <h5>Kevin Peterson</h5>
+              <span class="advisor-role">Client</span>
+              <p>As more and more people are turning to organic.</p>
+              <div class="advisor-social">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTNERS ============ -->
+  <section class="partners-section">
+    <div class="container">
+      <div class="row align-items-center justify-content-between g-4 text-center">
+        <div class="col-4 col-md-2"><div class="partner-logo"><i class="bi bi-hexagon"></i> Logoipsum</div></div>
+        <div class="col-4 col-md-2"><div class="partner-logo"><i class="bi bi-lightbulb"></i> IdeaLab</div></div>
+        <div class="col-4 col-md-2"><div class="partner-logo"><i class="bi bi-house-door"></i> HomeCo</div></div>
+        <div class="col-4 col-md-2"><div class="partner-logo"><i class="bi bi-pen"></i> Designers</div></div>
+        <div class="col-4 col-md-2"><div class="partner-logo"><i class="bi bi-alexa"></i> Alpha</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LATEST NEWS ============ -->
+  <section id="news" class="section news-section">
+    <div class="container">
+      <div class="section-heading text-center">
+        <span class="section-label">From The Blog</span>
+        <h2 class="section-title">Our Latest News</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="news-card">
+            <div class="news-img"><img src="img/news-1.jpg" alt="News 1"><span class="news-tag">Industry</span></div>
+            <div class="news-body">
+              <span class="news-cat">Gollhs Mona</span>
+              <h5>Possession of my entire soul</h5>
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
+              <div class="news-meta"><i class="bi bi-calendar3"></i> 14th August, 2019</div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="news-card">
+            <div class="news-img"><img src="img/news-2.jpg" alt="News 2"><span class="news-tag">Sales</span></div>
+            <div class="news-body">
+              <span class="news-cat">Work Mona</span>
+              <h5>Even the powerful Pointing</h5>
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
+              <div class="news-meta"><i class="bi bi-calendar3"></i> 21st July, 2019</div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="news-card">
+            <div class="news-img"><img src="img/news-3.jpg" alt="News 3"><span class="news-tag">Factory</span></div>
+            <div class="news-body">
+              <span class="news-cat">Dellhi Mona</span>
+              <h5>Pityful a rethoric question ran</h5>
+              <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring.</p>
+              <div class="news-meta"><i class="bi bi-calendar3"></i> 10th July, 2019</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL + GROWTH ============ -->
+  <section class="section testimonial-section">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="section-title">Testimonial</h2>
+          <div class="testimonial-box">
+            <div class="d-flex align-items-center mb-3">
+              <img src="img/avatar.jpg" alt="John Abraham" class="testimonial-avatar">
+              <div class="ms-3">
+                <h5 class="mb-0">John Abraham</h5>
+                <small class="text-muted">Morris, CEO</small>
+              </div>
+              <i class="bi bi-quote quote-icon ms-auto"></i>
+            </div>
+            <p class="testimonial-text">"The first mate and his Skipper too will do their very best to make the man named Brady tropic Island next these are the voyages of the Starship Enterprise of a man named Brady tropic Island."</p>
+            <div class="testimonial-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title">Business Growth</h2>
+          <div class="growth-chart">
+            <div class="chart-bars">
+              <div class="chart-col"><div class="bar bar-light" style="height:60%"></div><div class="bar bar-dark" style="height:80%"></div><span>2015</span></div>
+              <div class="chart-col"><div class="bar bar-light" style="height:45%"></div><div class="bar bar-dark" style="height:65%"></div><span>2016</span></div>
+              <div class="chart-col"><div class="bar bar-light" style="height:70%"></div><div class="bar bar-dark" style="height:90%"></div><span>2017</span></div>
+              <div class="chart-col"><div class="bar bar-light" style="height:55%"></div><div class="bar bar-dark" style="height:75%"></div><span>2018</span></div>
+              <div class="chart-col"><div class="bar bar-light" style="height:80%"></div><div class="bar bar-dark" style="height:100%"></div><span>2019</span></div>
+            </div>
+            <div class="chart-legend">
+              <span><i class="dot dot-light"></i> Investment</span>
+              <span><i class="dot dot-dark"></i> Revenue</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAP + REQUEST QUOTE ============ -->
+  <section id="contact" class="quote-section">
+    <div class="row g-0">
+      <div class="col-lg-6 map-col">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211676.0!2d-118.69192!3d34.02073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2sLos+Angeles!5e0!3m2!1sen!2sus!4v1600000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-lg-6 quote-col">
+        <div class="quote-inner">
+          <h2>Request for quote</h2>
+          <p>The argument in favor of using filler text goes something like this. If you use real content in the design process.</p>
+          <form class="quote-form">
+            <div class="row g-3">
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="How to assist you?"></div>
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Phone number*"></div>
+              <div class="col-md-6"><input type="text" class="form-control" placeholder="Your name*"></div>
+              <div class="col-md-6"><button type="submit" class="btn btn-quote w-100">Submit Request</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-5">
+          <h3 class="mb-1">Newsletter Subscribe</h3>
+          <p class="mb-0 text-muted">Sign up today for hints, tips and the latest updates.</p>
+        </div>
+        <div class="col-lg-7">
+          <form class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter Email Address">
+            <button type="submit" class="btn btn-primary-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand footer-brand" href="#">
+            <span class="brand-icon"><i class="bi bi-boxes"></i></span>
+            <span class="brand-text">LEZO<small>Finance</small></span>
+          </a>
+          <p class="mt-3">Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.</p>
+          <a href="#" class="btn btn-outline-light btn-sm mt-2">Read More</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Usefull Links</h5>
+          <ul class="footer-links">
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Business Growth</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Sustainability</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Performance</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Customer Insights</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Organization</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i> Advanced Analytics</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Latest News</h5>
+          <div class="footer-news">
+            <div class="d-flex mb-3">
+              <img src="img/news-1.jpg" alt="">
+              <div class="ms-3">
+                <span class="fn-date"><i class="bi bi-calendar3"></i> February 14, 2019</span>
+                <p class="mb-0">Seminar to improve business profit &amp; loss</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <img src="img/news-2.jpg" alt="">
+              <div class="ms-3">
+                <span class="fn-date"><i class="bi bi-calendar3"></i> January 31, 2019</span>
+                <p class="mb-0">Experts Opinion for save money for your future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Info</h5>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill"></i> <div><strong>Address</strong><br>185, Industry Street, Los Angeles, USA.</div></li>
+            <li><i class="bi bi-telephone-fill"></i> <div><strong>Call Us On</strong><br>Front Desk: +000-0000-0000 &amp; 00</div></li>
+            <li><i class="bi bi-envelope-fill"></i> <div><strong>Email at</strong><br>Support-team@i.com</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2026 <a href="#">Template Hub</a>. All Rights Reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <ul class="list-inline mb-0 footer-bottom-links">
+              <li class="list-inline-item"><a href="#">Legal</a></li>
+              <li class="list-inline-item"><a href="#">Sitemap</a></li>
+              <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+              <li class="list-inline-item"><a href="#">Terms &amp; Condition</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ THEME CUSTOMIZER (nút gear nổi bên phải) ============ -->
+  <div class="theme-customizer" id="themeCustomizer">
+    <button class="tc-toggle" id="tcToggle" type="button" aria-label="Tùy chỉnh giao diện"><i class="bi bi-gear-fill"></i></button>
+    <div class="tc-panel">
+      <h6>Màu chủ đạo</h6>
+      <div class="tc-colors">
+        <button class="tc-color active" type="button" data-color="#17a9e0" data-dark="#0f8fc0" style="background:#17a9e0" aria-label="Xanh dương"></button>
+        <button class="tc-color" type="button" data-color="#2ecc71" data-dark="#25a25a" style="background:#2ecc71" aria-label="Xanh lá"></button>
+        <button class="tc-color" type="button" data-color="#e74c3c" data-dark="#c0392b" style="background:#e74c3c" aria-label="Đỏ"></button>
+        <button class="tc-color" type="button" data-color="#9b59b6" data-dark="#7d3c98" style="background:#9b59b6" aria-label="Tím"></button>
+        <button class="tc-color" type="button" data-color="#f39c12" data-dark="#d68910" style="background:#f39c12" aria-label="Cam"></button>
+        <button class="tc-color" type="button" data-color="#1abc9c" data-dark="#148f77" style="background:#1abc9c" aria-label="Ngọc"></button>
+        <button class="tc-color" type="button" data-color="#e84393" data-dark="#c62c78" style="background:#e84393" aria-label="Hồng"></button>
+        <button class="tc-color" type="button" data-color="#34495e" data-dark="#2c3e50" style="background:#34495e" aria-label="Xám đậm"></button>
+      </div>
+      <button class="tc-reset" type="button" id="tcReset"><i class="bi bi-arrow-counterclockwise"></i> Mặc định</button>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <a href="#home" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- Bootstrap 5 JS (local) -->
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
