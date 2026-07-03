@@ -1,21 +1,20 @@
 <?php
-/** Blog / home posts index. @package Lezo */
+/** Search results. @package Lezo */
 if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 $has_sidebar = is_active_sidebar( 'sidebar-blog' );
 ?>
 <div class="page-hero">
 	<div class="container">
-		<h1><?php
-			if ( ( $blog = get_option( 'page_for_posts' ) ) ) { echo esc_html( get_the_title( $blog ) ); }
-			else { esc_html_e( 'Our Blog', 'lezo' ); }
-		?></h1>
+		<h1><?php printf( esc_html__( 'Kết quả tìm kiếm: %s', 'lezo' ), '“' . esc_html( get_search_query() ) . '”' ); ?></h1>
 		<?php lezo_breadcrumb(); ?>
 	</div>
 </div>
-
 <section id="content" class="section">
 	<div class="container">
+		<?php if ( have_posts() ) : ?>
+			<p class="text-muted mb-4"><?php printf( esc_html( _n( 'Tìm thấy %s kết quả.', 'Tìm thấy %s kết quả.', (int) $GLOBALS['wp_query']->found_posts, 'lezo' ) ), number_format_i18n( (int) $GLOBALS['wp_query']->found_posts ) ); ?></p>
+		<?php endif; ?>
 		<div class="row g-5">
 			<div class="<?php echo $has_sidebar ? 'col-lg-8' : 'col-12'; ?>">
 				<div class="row g-4">

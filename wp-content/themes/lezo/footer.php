@@ -12,12 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	<div class="container">
 		<div class="row g-4">
 			<div class="col-lg-3 col-md-6">
-				<a class="navbar-brand footer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php lezo_brand( true ); ?></a>
-				<p class="mt-3"><?php echo esc_html( lezo_mod( 'lezo_footer_about', 'Efficiently unleash cross-media information without cross-media value.' ) ); ?></p>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-outline-light btn-sm mt-2">Read More</a>
+				<?php if ( is_active_sidebar( 'footer-1' ) ) : dynamic_sidebar( 'footer-1' ); else : ?>
+					<a class="navbar-brand footer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php lezo_brand( true ); ?></a>
+					<p class="mt-3"><?php echo esc_html( lezo_mod( 'lezo_footer_about', 'Efficiently unleash cross-media information without cross-media value.' ) ); ?></p>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-outline-light btn-sm mt-2">Read More</a>
+				<?php endif; ?>
 			</div>
 
 			<div class="col-lg-3 col-md-6">
+				<?php if ( is_active_sidebar( 'footer-2' ) ) : dynamic_sidebar( 'footer-2' ); else : ?>
 				<h5 class="footer-title"><?php esc_html_e( 'Usefull Links', 'lezo' ); ?></h5>
 				<?php if ( has_nav_menu( 'footer' ) ) : ?>
 					<?php
@@ -45,9 +48,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 						?>
 					</ul>
 				<?php endif; ?>
+				<?php endif; ?>
 			</div>
 
 			<div class="col-lg-3 col-md-6">
+				<?php if ( is_active_sidebar( 'footer-3' ) ) : dynamic_sidebar( 'footer-3' ); else : ?>
 				<h5 class="footer-title"><?php esc_html_e( 'Latest News', 'lezo' ); ?></h5>
 				<div class="footer-news">
 					<?php
@@ -67,15 +72,18 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 						wp_reset_postdata();
 					endif; ?>
 				</div>
+				<?php endif; ?>
 			</div>
 
 			<div class="col-lg-3 col-md-6">
+				<?php if ( is_active_sidebar( 'footer-4' ) ) : dynamic_sidebar( 'footer-4' ); else : ?>
 				<h5 class="footer-title"><?php esc_html_e( 'Contact Info', 'lezo' ); ?></h5>
 				<ul class="footer-contact">
 					<li><i class="bi bi-geo-alt-fill"></i> <div><strong>Address</strong><br><?php echo esc_html( lezo_mod( 'lezo_footer_addr', '185, Industry Street, Los Angeles, USA.' ) ); ?></div></li>
 					<li><i class="bi bi-telephone-fill"></i> <div><strong>Call Us On</strong><br><?php echo esc_html( lezo_mod( 'lezo_footer_phone', 'Front Desk: +000-0000-0000 & 00' ) ); ?></div></li>
 					<li><i class="bi bi-envelope-fill"></i> <div><strong>Email at</strong><br><?php echo esc_html( lezo_mod( 'lezo_footer_email', 'Support-team@i.com' ) ); ?></div></li>
 				</ul>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

@@ -17,6 +17,7 @@ $social_icons = array( 'facebook' => 'bi-facebook', 'twitter-x' => 'bi-twitter-x
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Bỏ qua đến nội dung', 'lezo' ); ?></a>
 
 <!-- ============ TOP BAR ============ -->
 <div class="top-bar d-none d-lg-block">

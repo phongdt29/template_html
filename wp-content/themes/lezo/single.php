@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 get_header();
 ?>
 <div class="page-hero">
-	<div class="container"><h1><?php single_post_title(); ?></h1></div>
+	<div class="container"><h1><?php single_post_title(); ?></h1><?php lezo_breadcrumb(); ?></div>
 </div>
-<section class="section">
+<section id="content" class="section">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-9">
@@ -25,6 +25,7 @@ get_header();
 						</div>
 						<?php if ( has_tag() ) : ?><div class="post-tags mt-4"><?php the_tags( '<i class="bi bi-tags"></i> ', ', ' ); ?></div><?php endif; ?>
 					</article>
+					<div class="lezo-post-nav mt-4"><?php lezo_post_nav(); ?></div>
 					<div class="mt-5"><?php if ( comments_open() || get_comments_number() ) comments_template(); ?></div>
 				<?php endwhile; ?>
 			</div>
