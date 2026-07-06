@@ -1,0 +1,26 @@
+/* Editor styles - đồng bộ giao diện soạn thảo với front-end */
+:root { --primary: #17a9e0; --dark: #1c2b3a; }
+.editor-styles-wrapper {
+  font-family: 'Poppins', sans-serif;
+  color: #495b6c;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: 'Rubik', sans-serif;
+  color: var(--dark);
+  font-weight: 600;
+}
+.editor-styles-wrapper a { color: var(--primary); }
+.editor-styles-wrapper .has-primary-color { color: var(--primary); }
+.editor-styles-wrapper .has-primary-background-color { background-color: var(--primary); }
+.editor-styles-wrapper blockquote {
+  border-left: 4px solid var(--primary);
+  padding-left: 18px; color: #55677a; font-style: italic;
+}
+.editor-styles-wrapper .wp-block-button__link { background: var(--primary); border-radius: 4px; }
